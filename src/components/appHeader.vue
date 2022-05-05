@@ -5,7 +5,7 @@
         </div>
         <nav>
             <ul>
-                <li  v-for="(item,index) in links" :key="index" :class="{'selected' : item.active}" @click="item.active = true">{{item.testo}}</li>
+                <li  v-for="(item,index) in menu" :key="index" :class="{'selected' : item.active}" @click="item.active = true">{{item.testo}}</li>
             </ul>
         </nav>
     </header>
@@ -16,30 +16,10 @@ export default {
    name:'appHeader',
    data(){
        return {
-           links:[
-                {
-                    testo:'Home',
-                    link:'',
-                    active:false,
-                },
-                {
-                    testo:'Prodotti',
-                    link:'',
-                    active:true,
-                },
-                {
-                    testo:'Chi siamo',
-                    link:'',
-                    active:false,
-                },
-                {
-                    testo:'Contatti',
-                    link:'',
-                    active:false,
-                }
-            ]
+           
        }
-    }
+    },
+    props:['menu']
 }
 </script>
 <style lang="scss">

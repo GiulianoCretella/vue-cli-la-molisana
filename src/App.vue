@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <app-header/>
+    <app-header :menu="links"/>
     <main>
       <app-grid/>
     </main>
     <footer>
-      <app-footer/>
+      <app-footer :pasta="pastificio"/>
     </footer>
   </div>
 </template>
@@ -21,6 +21,54 @@ export default {
     appHeader,
     appGrid,
     AppFooter,
+  },
+  data(){
+    return {
+      links:[
+        {
+            testo:'Home',
+            link:'',
+            active:false,
+        },
+        {
+            testo:'Prodotti',
+            link:'',
+            active:true,
+        },
+        {
+            testo:'Chi siamo',
+            link:'',
+            active:false,
+        },
+        {
+            testo:'Contatti',
+            link:'',
+            active:false,
+        }
+      ],
+      pastificio:[
+        {
+            text:'Il Pastificio',
+            url:'#'
+        },
+        {
+            text:'Grano',
+            url:'#'
+        },
+        {
+            text:'Filiera',
+            url:'#'
+        },
+        {
+            text:'100 anni di pasta',
+            url:'#'
+        },
+        {
+            text:'Sartoria della pasta',
+            url:'#'
+        },
+      ]
+    }
   }
 }
 </script>
